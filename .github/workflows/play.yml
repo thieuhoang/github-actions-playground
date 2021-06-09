@@ -7,4 +7,8 @@ jobs:
     runs-on: windows-latest
     steps:
       - name: list file
-        run: dir
+        run: |
+          & cmd.exe dir
+          tar.exe -xvf Libraries.zip
+          dir "C:\Program Files (x86)\Microsoft SDKs"
+          dir "C:\Program Files (x86)"
